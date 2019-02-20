@@ -1,0 +1,7 @@
+1.ae_log文件是原始日志，先执行 ./unmarshal -input=ae_log 把data.org_token,data.phone,data.deviceId解析出来
+  为减小文件大小，本文件夹的ae_log只截取了100条
+2.解析出的key依此写入文件二：key
+3.执行 ./lru -input=key -cap=<size>  //按照key的数量的10%和5%填入24000,12000
+4.最后输出 key总数、命中cache数：
+	>>>>>>>>>>>> 248288 19054	
+  计算比值，作为命中率
